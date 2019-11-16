@@ -1,0 +1,162 @@
+<!--
+Author:W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Votingo</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+   <link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+   <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!-- //Fonts -->
+
+</head>
+
+<body>
+   
+<!-- header -->
+<header>
+    <div class="container">
+        <div class="header d-lg-flex justify-content-between align-items-center">
+            <div class="header-agile">
+                <h1>
+                    <a class="navbar-brand logo" href="index.html">
+                        <span  aria-hidden="true" ></span> VotinGO  <span class="fa fa-user-secret" aria-hidden="true" ></span>
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- //header -->
+<div id="backgroundImage2">
+    <!-- page details -->
+    <div class="breadcrumb-agile">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+            </li>
+            <!-- <li class="breadcrumb-item active" aria-current="page"><span id="autentificare">Autentifica-te</span></li> -->
+        </ol>
+    </div>
+    <!-- //page details -->
+    <!-- //banner-botttom -->
+    <div id="adaugaConcurs">
+        <section class="content-info py-5">
+            <div class="container py-md-5">
+                <div class="text-center px-lg-5">
+                    <h3 class="heading text-center mb-3 mb-sm-5" id="autentificare">Adauga Concurs</h3>  
+                </div>
+                <div class="contact-w3pvt-form mt-5">
+                    <form action="#" class="w3layouts-contact-fm" method="post">
+                        <div class="row">
+                             <div class="col-10">
+                                <div class="form-group">
+                                    <label>Tip Concurs</label>
+                                    <select name="department" id="department" class="form-control">
+                                        <option id="tip" value="">Alege tipul concursului</option>
+                                        <option value="1">Battle</option>
+                                        <option value="2">Sincron</option>
+                                        <option value="3">Asincron</option>
+                                    </select>
+                                </div>
+                                    
+                                </div>
+                            <div class="col-10 col-12-mobile">
+                                <div class="form-group">
+                                    <label>Nume Concurs</label>
+                                    <input class="form-control" type="text" v-model="name" name="name" id="name" value="" />
+                                </div>
+                            </div>
+
+                             <div class="col-5 col-12-mobile">
+                                <div class="form-group">
+                                    <label>Numar Runde</label>
+                                    <input class="form-control" type="text" v-model="runde" name="runde" id="runde" value=""/>
+                                </div>
+                            </div>
+
+                             <div class="col-5 col-12-mobile">
+                                <div class="form-group">
+                                    <label>Numar Serii</label>
+                                    <input class="form-control" type="text" v-model="serii" name="serii" id="serii" value=""/>
+                                </div>
+                            </div>
+
+                             <div class="col-5 col-12-mobile">
+                                <div class="form-group">
+                                    <label>Numar Echipe</label>
+                                    <input class="form-control" type="text" v-model="echipe" name="echipe" id="echipe" value=""/>
+                                </div>
+                            </div>
+
+
+                             <div class="col-5 col-12-mobile">
+                                <div class="form-group">
+                                    <label>Numar Echipe per Serie</label>
+                                    <input class="form-control" type="text" name="echipeserie" v-model="echipeserie" id="echipeserie" value=""/>
+                                </div>
+                            </div>
+
+                              <div class="col-10 col-12-mobile">
+                                <div class="form-group">
+                                    <label>Parola pentru jurati</label>
+                                    <input class="form-control" type="text" name="parola" v-model="parola" id="parola" value="" />
+                                </div>
+                            </div>
+
+                            <div class="col-10 col-12-mobile">
+                                <div class="form-group" id="categories">
+                                    <label>Adauga categoriile</label>
+                                     <input class="form-control" type="text" onfocus="this.value=''"name="categoriee" v-model="items" id="categoriee" value="" />
+                                      <p id="adaugaCategorie"><a href="#" @click.prevent="addItem()">Adauga Categorie</a></p>
+                                   <ul v-if="items.length > 0" id="ulStyle">
+                                        <li id="styleCategorie" v-for="item in items" >{{ item.categorie }} &nbsp;&nbsp;</li>
+                                    </ul>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="form-group mx-auto mt-3">
+                                <button type="submit"  v-on:click.prevent="adaugaConcurs()" id="adaugaConcursButton" class="btn submit">Autentificare</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+        <script src="node_modules/vue/dist/vue.js"></script>
+        <script src="assets/js/vue-scripts/adauga-concurs.js" type="text/javascript"></script>
+
+</body>
+</html>

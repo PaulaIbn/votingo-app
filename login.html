@@ -1,0 +1,104 @@
+<!--
+Author:W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Votingo</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+   <link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+   <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!-- //Fonts -->
+
+</head>
+
+<body>
+   
+<!-- header -->
+<header>
+    <div class="container">
+        <div class="header d-lg-flex justify-content-between align-items-center">
+            <div class="header-agile">
+                <h1>
+                    <a class="navbar-brand logo" href="index.html">
+                        <span  aria-hidden="true" ></span> VotinGO  <span class="fa fa-user-secret" aria-hidden="true" ></span>
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- //header -->
+<div id="backgroundImage">
+    <!-- page details -->
+    <div class="breadcrumb-agile">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+        </li>
+        <!-- <li class="breadcrumb-item active" aria-current="page"><span id="autentificare">Autentifica-te</span></li> -->
+    </ol>
+    </div>
+
+    <div id="app">
+         <section class="content-info py-5">
+            <div class="container py-md-5">
+                <div class="text-center px-lg-5">
+                    <h3 class="heading text-center mb-3 mb-sm-5" id="autentificare">Autentifica-te</h3>  
+                </div>
+                <div id="stars" col-lg-12></div>
+                <div class="contact-w3pvt-form mt-5">
+                    <form action="#" class="w3layouts-contact-fm" method="post">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Username</label>
+                                    <input class="form-control" type="text" v-model="username" name="Username" placeholder="" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Parola</label>
+                                    <input class="form-control" type="text" v-model="password" name="Parola" placeholder="" required="">
+                                </div>
+                            </div>
+                            <div class="form-group mx-auto mt-3">
+                                <button type="submit" v-on:click.prevent="login()" class="btn submit">Autentificare</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<script src="node_modules/vue/dist/vue.js"></script>
+
+</body>
+</html>
